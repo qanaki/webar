@@ -16,16 +16,16 @@
     >
       <!-- 城のオブジェクトを配置 -->
       <a-assets>
-        <a-asset-item id = "house" src = "assets/Lowpolisample.glb"></a-asset-item>
+        <a-asset-item id = "house" src = "assets/sample.gltf"></a-asset-item>
       </a-assets>
-      <a-obj-model
+      <!--<a-obj-model
           gltf-model="#house"
           scale = "1 1 1"
           position="0 -1.5 -20"
       >
-      </a-obj-model>
+      </a-obj-model>-->
+      <a-gltf-model src = "#house" scale = "1 1 1" position="0 -1.5 -10"></a-gltf-model>
       <a-camera rotation-reader></a-camera>
-      <!--<a-gltf-model src = "#house" scale = "1 1 1" position="0 -1.5 -30"></a-gltf-model>-->
     </a-scene>
   </body>
 </html>

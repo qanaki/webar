@@ -9,10 +9,23 @@
 </head>
   </head style="margin: 0; overflow: hidden">
   <body>
-    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled:false; sourceType: webcam;" renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
+    <a-scene
+      embedded arjs="trackingMethod: best; debugUIEnabled:false; sourceType: webcam;"
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+    >
       <!-- 城のオブジェクトを配置 -->
-      <a-asset-item id = "house" src = "assets/Lowpolisample.glb"></a-asset-item>
-      <a-gltf-model src = "#house" scale = "1 1 1" position="0 -1.5 -30"></a-gltf-model>
+      <a-assets>
+        <a-asset-item id = "house" src = "assets/Lowpolisample.glb"></a-asset-item>
+      </a-assets>
+      <a-obj-model
+          gltf-model="#house"
+          scale = "1 1 1"
+          position="0 -1.5 -30"
+      >
+      </a-obj-model>
+      <a-camera rotation-reader></a-camera>
+      <!--<a-gltf-model src = "#house" scale = "1 1 1" position="0 -1.5 -30"></a-gltf-model>-->
     </a-scene>
   </body>
 </html>
